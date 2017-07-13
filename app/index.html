@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+
+<body ng-app="moviecat">
+    <!-- 顶部导航栏开始 -->
+    <div class="top" ng-controller="serach">
+        <div class="header">
+            <a href="#/home_page"><img src="assets/img/111.png" alt=""></a>
+            <div class="search">
+                <form ng-submit="search()">
+                    <input class="my-input" ng-model="movievalue" type="text" placeholder="电影搜索">
+                    <button>搜索</button>
+                </form>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul movie-tab>
+                
+            </ul>
+        </nav>
+    </div>
+    <!-- 顶部导航栏结束 -->
+
+
+    <div class="container" ng-view >
+        
+        <!-- 首页开始 -->
+
+        <!-- 首页结束 -->
+
+        <!--电影列表开始-->
+
+        <!--电影列表结束-->
+
+        <!-- 电影详情开始 -->
+
+        <!-- 电影详情结束 -->
+        <!--其他-->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy;爱喝酒的胖娃娃 <a href="https://18355166248.github.io">gitHup</a></p>
+        </div>
+    </footer>
+
+    
+    <script src="assets/js/prefixfree.min.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./home_page/home_page.js"></script>
+    <script src="./movie_list/move_list.js"></script>
+    <script src="./common/jsonpService.js"></script>
+    <script src="./common/directives/tab.js"></script>
+    <script src="./details/detail.js"></script>
+</body>
+
+</html>
